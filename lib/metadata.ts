@@ -38,8 +38,8 @@ const siteMetadata: SiteMetaData = {
   defaultTheme: "system",
   activeAnnouncement: true,
   announcement: {
-    buttonText: "Support on DevHunt →",
-    link: "https://devhunt.org/tool/modern-developer-blog-template-digital-garden-starter",
+    buttonText: "Email Me →",
+    link: "mailto: jiangjianwen082@gmail.com",
   },
   postsPerPage: 10,
   postsOnHomePage: 8,
