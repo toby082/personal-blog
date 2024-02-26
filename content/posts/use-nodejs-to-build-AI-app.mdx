@@ -1,0 +1,97 @@
+---
+title: "Use Javascript To Build An ChatGPT App"
+publishedDate: "2024-01-05"
+lastUpdatedDate: "2024-01-05"
+tags:
+  - web
+  - docs
+  - development
+  - angular
+description: "How to build an application using Javascript and enable ChatGPT feature"
+status: published
+series:
+  order: 2
+  title: "Using this template"
+---
+
+<NewsletterCTA
+  title="I also write deep dives in email"
+  description="I write about coding, design, digital nomad life, and solopreneurship. Join over 1,000 other developers in
+            getting better in business. Unsubscribe whenever."
+  buttonText="Send me the emails"
+  className=""
+/>
+
+## Creating an OpenAI Account
+
+- Go to the OpenAI API documentation page by navigating to https://openai.com/blog/openai-api.
+- Click on the “Sign Up” button and follow the on-screen instructions to complete your registration.
+
+## Understanding the .env File
+
+Before we proceed to generate the API key, let’s take a brief intermission.
+What is .env?
+A .env file is a secure container for storing sensitive information like API keys and configuration variables in software development. It keeps this information safe while allowing your code to access it when needed.
+Create .env file:
+Creating a .env File:
+
+- Launch your server project.
+- Generate a new file with the name “.env”.
+- Open the newly created file and define a variable named “OPENAI_API_KEY”.
+
+## Generating an API Key
+
+- Return to the OpenAI website.
+- Navigate to “Personal” and select “View API keys.”
+- Click on “Create new secret key.”
+- Provide a name for your key, then click “Create secret key.”
+- You will be presented with your API key. Copy it to your clipboard.
+- Open the .env file you created earlier and paste the API key.
+- Remember to save the .env file, as you won’t be able to retrieve the key once you close it. Your API key is now securely stored for future use.
+
+## Creating the API Request Function
+
+To begin, we need to set up the environment for seamless interaction with OpenAI. Let’s initiate this process by installing the necessary dependencies: OpenAI and dotenv. The latter is crucial for accessing our .env file securely.
+
+- Open your terminal or command prompt.
+
+```bash
+npm install openai
+npm install dotenv
+```
+
+- Add following lines of code at the beginning of your project.
+
+```js
+const OpenAI = require("openai");
+require("dotenv").config();
+
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+```
+
+- Here’s a straightforward API request function:
+
+```js
+exports.chatReq = async (req, res) => {
+  try {
+    const message = "Which is the capital of Albania?";
+    const response = await openai.chat.completions.create({
+      model: "gpt-3.5-turbo",
+      messages: [{ role: "user", content: message }],
+      temperature: 0,
+      max_tokens: 1000,
+    });
+    res.status(200).json(response);
+  } catch (err) {
+    res.status(500).json(err.message);
+  }
+};
+```
+
+#### Validate your code using Postman
+
+---
+
+This post will be the third part of the series on using this template. In this post, we'll look at how to choose and set up Analytics, newsletter, and other providers for your blog.
