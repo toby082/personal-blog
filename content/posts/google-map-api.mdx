@@ -39,18 +39,13 @@ cd my-maps-project
 
 #### Install Angular Google Maps
 
-<<<<<<< Updated upstream
-
 =======
 
-> > > > > > > Stashed changes
-> > > > > > > Angular Google Maps (short name: AGM) gets shipped via the Node Package Manager (NPM). Run the following command to add it to your new project:
+Angular Google Maps (short name: AGM) gets shipped via the Node Package Manager (NPM). Run the following command to add it to your new project:
 
 ```js
 npm install @agm/core
 ```
-
-<<<<<<< Updated upstream
 
 #### Setup @NgModule
 
@@ -62,43 +57,39 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 
 import { AppComponent } from "./app.component";
-=======
+```
 #### Setup @NgModule
 Open src/app/app.module.ts and import the AgmCoreModule. You neeed to provide a Google Maps API key to be able to see a Map. Get an API key here.
+
 ```js
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
->>>>>>> Stashed changes
 
 @NgModule({
   imports: [
     BrowserModule,
     AgmCoreModule.forRoot({
-<<<<<<< Updated upstream
       apiKey: "",
     }),
   ],
   providers: [],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
-=======
       apiKey: ''
     })
   ],
   providers: [],
   declarations: [ AppComponent ],
   bootstrap: [ AppComponent ]
->>>>>>> Stashed changes
 })
 export class AppModule {}
 ````
 
 #### Extending the app component
-
-<<<<<<< Updated upstream
 
 Angular CLI already created an app component the we’ll now use to create our first google map. Open the file src/app/app.component.ts and modify it like below:
 
@@ -112,7 +103,6 @@ import { Component } from "@angular/core";
 })
 export class AppComponent {
   title = "My first AGM project";
-=======
 Angular CLI already created an app component the we’ll now use to create our first google map. Open the file src/app/app.component.ts and modify it like below:
 ```js
 import { Component } from '@angular/core';
@@ -130,19 +120,13 @@ export class AppComponent {
 }
 ````
 
-<<<<<<< Updated upstream
-
 #### Setup the template
 
 Open the file src/app/app.component.html and paste the following content:
 
-=======
-
 #### Setup the template
 
 Open the file src/app/app.component.html and paste the following content:
-
-> > > > > > > Stashed changes
 
 ```html
 <h1>{{ title }}</h1>
@@ -156,12 +140,7 @@ Open the file src/app/app.component.html and paste the following content:
 
 #### Setup the CSS file
 
-<<<<<<< Updated upstream
-
-=======
-
-> > > > > > > Stashed changes
-> > > > > > > Open the file src/app/app.component.css and paste the following content:
+Open the file src/app/app.component.css and paste the following content:
 
 ```css
 agm-map {
@@ -171,18 +150,13 @@ agm-map {
 
 ### Build and run your application
 
-<<<<<<< Updated upstream
-
 Great! So we have created all the needed source files, so everything should be ready to build an run the application.
 
 Run the following command in the project root folder:
 
-=======
 Great! So we have created all the needed source files, so everything should be ready to build an run the application.
 
 Run the following command in the project root folder:
-
-> > > > > > > Stashed changes
 
 ```bash
 ng serve
@@ -190,16 +164,12 @@ ng serve
 
 Then, open the following URL in your browser: http://localhost:4200/
 
-<<<<<<< Updated upstream
 The command starts the following things: _ Starts the TypeScript compiler and compiles all sources files (watches also for file changes in the source files and recompiles all files if something has changed) _ Starts a local web server to serve the Angular application. It refreshes the page when served files change.
 
 ## When everything works as expected, you should see your first Google Map created with AGM 🎉🎉🎉!
 
-=======
 The command starts the following things: _ Starts the TypeScript compiler and compiles all sources files (watches also for file changes in the source files and recompiles all files if something has changed) _ Starts a local web server to serve the Angular application. It refreshes the page when served files change.
 
 ## When everything works as expected, you should see your first Google Map created with AGM 🎉🎉🎉!
-
-> > > > > > > Stashed changes
 
 This post will be the third part of the series on using this template. In this post, we'll look at how to choose and set up Analytics, newsletter, and other providers for your blog.
