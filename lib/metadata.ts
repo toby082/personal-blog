@@ -23,7 +23,7 @@ export const defaultAuthor: AuthorType = {
 };
 
 const defaultTitle = `${defaultAuthor.name}'s Blog`;
-const defaultDescription = `I'm ${defaultAuthor.name}. Building hackin’ cool digital products around the world 🌴.`;
+const defaultDescription = `I'm ${defaultAuthor.name}. Embrace new tech and skills to digitalize more things 🌴.`;
 
 const siteMetadata: SiteMetaData = {
   title: {

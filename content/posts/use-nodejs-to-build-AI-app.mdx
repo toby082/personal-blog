@@ -24,22 +24,44 @@ series:
 
 ## Creating an OpenAI Account
 
+<<<<<<< Updated upstream
+
+=======
+
+> > > > > > > Stashed changes
+
 - Go to the OpenAI API documentation page by navigating to https://openai.com/blog/openai-api.
 - Click on the “Sign Up” button and follow the on-screen instructions to complete your registration.
 
 ## Understanding the .env File
 
-Before we proceed to generate the API key, let’s take a brief intermission.
-What is .env?
-A .env file is a secure container for storing sensitive information like API keys and configuration variables in software development. It keeps this information safe while allowing your code to access it when needed.
-Create .env file:
-Creating a .env File:
+<<<<<<< Updated upstream
+
+=======
+
+> > > > > > > Stashed changes
+> > > > > > > Before we proceed to generate the API key, let’s take a brief intermission.
+> > > > > > > What is .env?
+> > > > > > > A .env file is a secure container for storing sensitive information like API keys and configuration variables in software development. It keeps this information safe while allowing your code to access it when needed.
+> > > > > > > Create .env file:
+> > > > > > > Creating a .env File:
+> > > > > > > <<<<<<< Updated upstream
+
+=======
+
+> > > > > > > Stashed changes
 
 - Launch your server project.
 - Generate a new file with the name “.env”.
 - Open the newly created file and define a variable named “OPENAI_API_KEY”.
 
 ## Generating an API Key
+
+<<<<<<< Updated upstream
+
+=======
+
+> > > > > > > Stashed changes
 
 - Return to the OpenAI website.
 - Navigate to “Personal” and select “View API keys.”
@@ -51,9 +73,17 @@ Creating a .env File:
 
 ## Creating the API Request Function
 
+<<<<<<< Updated upstream
+
 To begin, we need to set up the environment for seamless interaction with OpenAI. Let’s initiate this process by installing the necessary dependencies: OpenAI and dotenv. The latter is crucial for accessing our .env file securely.
 
 - Open your terminal or command prompt.
+
+=======
+To begin, we need to set up the environment for seamless interaction with OpenAI. Let’s initiate this process by installing the necessary dependencies: OpenAI and dotenv. The latter is crucial for accessing our .env file securely.
+
+- Open your terminal or command prompt.
+  > > > > > > > Stashed changes
 
 ```bash
 npm install openai
@@ -61,6 +91,11 @@ npm install dotenv
 ```
 
 - Add following lines of code at the beginning of your project.
+  <<<<<<< Updated upstream
+
+=======
+
+> > > > > > > Stashed changes
 
 ```js
 const OpenAI = require("openai");
@@ -71,7 +106,14 @@ const openai = new OpenAI({
 });
 ```
 
+<<<<<<< Updated upstream
+
 - Here’s a straightforward API request function:
+
+=======
+
+- Here’s a straightforward API request function:
+  > > > > > > > Stashed changes
 
 ```js
 exports.chatReq = async (req, res) => {
@@ -89,6 +131,12 @@ exports.chatReq = async (req, res) => {
   }
 };
 ```
+
+<<<<<<< Updated upstream
+
+=======
+
+> > > > > > > Stashed changes
 
 #### Validate your code using Postman
 

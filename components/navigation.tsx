@@ -50,8 +50,7 @@ export function Navigation() {
           link={siteMetadata.announcement.link as string}
         >
           <Rocket className="mr-2 h-5 w-5" />
-          <strong className="mr-1">Open to work</strong> If you are hiring, please contact me by
-          dropping me an email.
+          <strong className="mr-1">Open to work</strong> If you are hiring, please contact me by dropping me an email.
         </AnnouncementBar>
       )}
       <header
