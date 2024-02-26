@@ -9,16 +9,6 @@ export const hardware = [
     description: `My main phone. Camera is perfect for YouTube videos.`,
     href: "https://amzn.to/3JaQgzv",
   },
-  {
-    title: "Elgato Wave:3 Microphone (*)",
-    description: `Perfect video and podcast microphone. Easy to use, small enough to travel with.`,
-    href: "https://amzn.to/3J4XMvt",
-  },
-  {
-    title: "Apple AirPods Max (*)",
-    description: `Honestly, I hate the price, but I love the headphones. I use them for calls, music, and videos.`,
-    href: "https://amzn.to/3X0PHxM",
-  },
 ];
 
 export const software = [
