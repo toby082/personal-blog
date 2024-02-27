@@ -1,0 +1,84 @@
+---
+title: "Shortest Distance in A Binary Maza"
+publishedDate: "2024-02-27"
+lastUpdatedDate: "2024-02-27"
+tags:
+  - algorithm
+  - Javascript
+  - DSA
+  - docs
+description: "How to resolve shortest distance in a binary Maza challenge"
+status: published
+series:
+  order: 2
+  title: "Algorithms"
+---
+
+[Shortest path](/shortest-path.png)
+
+Shorttest path problem is asked quite often in interviews
+
+#### DFS or BFS?
+
+When should I use DFS?
+
+- When the question is asked to find the longest path between two nodes in a graph
+- When the tree structure is really wide with quite a number of branches
+- When it requires to check child nodes before checking sibling nodes
+- When dealing with a maze or puzzle challenge
+
+When should I use BFS?
+
+- When you are asked to find the shortest path between two nodes in a graph
+- When you need to prioritizse searching leaves that are closer to the starting node
+
+#### The code
+
+```js
+class Solution {
+  shortestPath(grid, source, destination) {
+    let rows = grid.length;
+    let cols = grid[0].length;
+    let visited = new Set();
+    let [dx, dy] = destination;
+
+    const directions = [
+      [-1, 0],
+      [1, 0],
+      [0, 1],
+      [0, -1],
+    ];
+
+    let queue = [[source[0], source[1], 0]]; // [sx, sy, dist]
+    visited.add(source.join(","));
+
+    while (queue.length > 0) {
+      let [sx, sy, dist] = queue.shift();
+
+      // if it reaches dest, return the current distance
+      if (sx === dx && sy === dy) return dist;
+
+      // bfs
+      for (let direct of directions) {
+        let nx = sx + direct[0];
+        let ny = sy + direct[1];
+        let key = nx + "," + ny;
+
+        if (nx >= 0 && ny >= 0 && nx < rows && ny < cols && grid[nx][ny] === 1 && !visited.has(key)) {
+          if (nx === dx && ny === dy) return dist + 1;
+          else {
+            queue.push([nx, ny, dist + 1]);
+            visited.add(key);
+          }
+        }
+      }
+    }
+
+    return -1;
+  }
+}
+```
+
+---
+
+This post will be the third part of the series on using this template. In this post, we'll look at how to choose and set up Analytics, newsletter, and other providers for your blog.
